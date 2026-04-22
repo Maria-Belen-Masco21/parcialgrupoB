@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="/agendar" class="btn btn-success mb-3">Nueva Cita</a>
+
+<div class="row">
+{% for cita in citas %}
+    <div class="col-md-4">
+        <div class="card bg-secondary text-white mb-3">
+            <div class="card-body">
+                <h5>{{ cita[1] }} ({{ cita[3] }})</h5>
+                <p>Dueño: {{ cita[2] }}</p>
+                <p>Fecha: {{ cita[4] }}</p>
+
+                <a href="/editar/{{ cita[0] }}" class="btn btn-warning btn-sm">Editar</a>
+                <a href="/eliminar/{{ cita[0] }}" class="btn btn-danger btn-sm">Eliminar</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
