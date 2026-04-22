@@ -2,23 +2,29 @@
 
 {% block content %}
 
-<a href="/agendar" class="btn btn-success mb-3">Nueva Cita</a>
+<div class="hero">
+    <div>
+        <h1>🐾 Clínica Veterinaria</h1>
+        <p>Gestión moderna de citas</p>
+        <a href="/agendar" class="btn btn-success btn-lg">Agendar Cita</a>
+    </div>
+</div>
 
-<div class="row">
-{% for cita in citas %}
-    <div class="col-md-4">
-        <div class="card bg-secondary text-white mb-3">
-            <div class="card-body">
+<div class="container mt-5">
+    <div class="row">
+    {% for cita in citas %}
+        <div class="col-md-4">
+            <div class="card p-3 text-white">
                 <h5>{{ cita[1] }} ({{ cita[3] }})</h5>
-                <p>Dueño: {{ cita[2] }}</p>
-                <p>Fecha: {{ cita[4] }}</p>
+                <p>👤 {{ cita[2] }}</p>
+                <p>📅 {{ cita[4] }}</p>
 
                 <a href="/editar/{{ cita[0] }}" class="btn btn-warning btn-sm">Editar</a>
                 <a href="/eliminar/{{ cita[0] }}" class="btn btn-danger btn-sm">Eliminar</a>
             </div>
         </div>
+    {% endfor %}
     </div>
-{% endfor %}
 </div>
 
 {% endblock %}

@@ -1,0 +1,36 @@
+body {
+    background: #0f172a;
+    color: white;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+                url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.form-container {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+input {
+    background: rgba(255,255,255,0.1) !important;
+    color: white !important;
+}
